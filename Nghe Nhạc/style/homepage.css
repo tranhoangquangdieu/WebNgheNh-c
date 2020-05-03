@@ -1,0 +1,326 @@
+/*Phần Header*/
+*
+{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+#head
+{
+    width: 100%;
+    height: 100px;
+    background-color:#cccccc;
+    display: flex;
+    flex-direction: row;
+}
+#logo
+{
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+#inner
+{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 30px;
+    padding-left: 367px;
+    padding-top: 5px;
+}
+#extrahead
+{
+    background-color: #f2f2f2;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.extra
+{
+    border: none;
+    outline: none;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 18px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+}
+#about
+{
+    color: black;
+}
+
+.dropdown_casy_btn
+{
+    background-color: #f2f2f2;
+    color: black;
+    font-size: 18px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.dropdown_casy
+{
+    position: relative;
+    display: inline-block;
+}
+.dropdown_casy_content
+{
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 18px;
+    right: -68px;
+}
+.dropdown_casy_content a{
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown_casy_content span{
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    cursor: pointer;
+}
+.dropdown_casy_content a:hover {background-color: #ddd;}
+.dropdown_casy_content span:hover {background-color: #ddd;}
+.dropdown_casy:hover .dropdown_casy_content {display: block;}
+/*Phần Footer*/
+#foot_text
+{
+    font-family: Roboto,sans-serif;
+
+}
+#footerdb
+{
+    background-color: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+#mediaicon
+{
+    margin-left: 30px;
+    margin-top: 25px;
+    height: 50px;
+    width: 50px;
+}
+.container
+{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    display: inline-block;
+}
+.casy_image
+{
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 12px;
+}
+/*Hiệu ứng khi mouseover*/
+.overlay
+{
+    position: absolute; 
+    bottom: 0px;
+    background: rgb(0,0,0);
+    background: rgba(0,0,0,0.5); 
+    color: #f1f1f1; 
+    width: 100%;
+    transition:.5s ease;
+    opacity:0;
+    color: white;
+    font-size: 16px;
+    padding: 10px;
+    text-align: center;
+    font-family: Roboto,sans-serif;
+    border-radius: 12px;
+}
+.container:hover .overlay 
+{
+    opacity: 1;
+}
+/**/
+#main_body
+{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+#main_1
+{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    width: 50%;
+    justify-content: space-around;
+    row-gap: 20px;
+    padding-top: 20px;
+}
+#main_2
+{
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 20px;
+}
+#background
+{
+    position: absolute;
+    width: 50%;
+    height: 491px;
+    filter: blur(4px);
+}
+#background2
+{
+    position: absolute;
+    width: 50%;
+    height: 491px;
+}
+#thumbnail {
+    position: absolute;
+    width: 280px;
+    height: 280px;
+    left: 800px;
+    top: 180px;
+    border-radius: 30px;
+}
+#play-pause {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    filter: invert(100%);
+    left: 930px;
+    top: 510px;
+}
+#next-song{
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+    filter: invert(100%);
+    top: 520px;
+    right: 200px;
+}
+#previous-song {
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+    top: 520px;
+    right: 390px;
+    filter: invert(100%);
+}
+/*Syle Phần Progress Bar*/
+
+#progress-bar {
+    -webkit-appearance: none;
+    appearance: none;
+    position: absolute;
+    z-index: 4;
+    height: 6px;
+    background: #000000;
+    width: 300pt;
+    top: 569px;
+    border-radius: 30px;
+    left: 60%;
+}
+#progress-bar::-webkit-slider-thumb 
+{
+    -webkit-appearance: none;
+    margin-top: -3px;
+    margin-left: 0px;
+    height: 15px;
+    width: 7px;
+    border: 300px;
+    background: -webkit-linear-gradient(45deg,  rgb(213, 213, 213), #e600e6);
+    border-radius: 30px;
+    cursor: pointer;
+}
+#progress-bar::-webkit-slider-runnable-track {
+    -webkit-appearance: none;
+    appearance: none;
+    cursor: pointer;
+    max-height: 10px;
+    border-radius: 30px;
+}
+#progress-bar:focus {
+    outline: none;
+    transition: opacity .2s;
+    -webkit-transition: .2s;
+}
+/*Thời Gian*/
+.durationTime {
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    color: #e600e6;
+    top: 561.5px;
+    right: 55px;
+}
+.currentTime {
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    color: #e600e6;
+    top: 561.5px;
+    left: 700px;
+}
+.song-title {
+    position: absolute;
+    z-index: 4;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    top: 485px;
+}
+.container_song-title
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+#top1
+{
+    color: royalblue ;
+}
+#top2
+{
+    color: seagreen;
+}
+#top3
+{
+    color: tomato;
+}
+#top4
+{
+    color: slateblue;
+}
+#top5
+{
+    color: darkgoldenrod;
+}
+
+
+
+
+
+

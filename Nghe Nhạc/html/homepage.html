@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nghe Nhạc Vpop</title>
+    <link rel="stylesheet" href="../style/homepage.css">
+    <script src="../java/homepage.js" defer></script>
+</head>
+
+<body>
+    <header id="head">
+        <div id="logo">
+            <img src="../img/head_foot/logo.PNG" alt="logo image" width="130px" height="80px">
+        </div>
+        <div id="inner">
+            <h1>Nhạc Trẻ</h1>
+        </div>
+        <img id="mediaicon" src="../img/head_foot/music-and-multimedia.png" alt="media" width="30px" height="30px">
+    </header>
+    <div id="extrahead">
+        <div>
+            <a href="../html/homepage.html" class="extra" id="about">Home</a>
+            &ensp;&ensp;<span>|</span>
+            &ensp;&ensp;<a href="../html/about.html" class="extra" id="about">About Me</a>
+            &ensp;&ensp;<span>|</span>
+            &ensp;&ensp;
+            <div class="dropdown_casy">
+                <button class="dropdown_casy_btn" class="extra">Top 5 Bài Hát Hot Nhất</button>
+                <div class="dropdown_casy_content">
+                    <span id="top1" onclick="top1()">#1 Thích Thì Đến - Lê Bảo Bình</span>
+                    <span id="top2" onclick="top2()">#2 Tình Sầu Thiên Thu Muôn Lối - Doãn Hiếu</span>
+                    <span id="top3" onclick="top3()">#3 Hơn Cả Yêu - Đức Phúc</span>
+                    <span id="top4" onclick="top4()">#4 Yêu Từ Đâu Mà Ra? - Lil Zpoet</span>
+                    <span id="top5" onclick="top5()">#5 Sợ Phải Kết Thúc - Nhật Phong</span>
+                </div>
+            </div>    
+            &ensp;&ensp;<span>|</span>
+            &ensp;&ensp;
+            <div class="dropdown_casy">
+                <button class="dropdown_casy_btn" class="extra">Ca Sĩ</button>
+                <div class="dropdown_casy_content">
+                    <a href="../html/amee.html">Amee</a>
+                    <a href="../html/bray.html">B Ray</a>
+                    <a href="../html/denvau.html">Đen Vâu</a>
+                    <a href="../html/ducphuc.html">Đức Phúc</a>
+                    <a href="../html/erik.html">Erik</a>
+                    <a href="../html/jack.html">Jack</a>
+                    <a href="../html/lebaobinh.html">Lê Bảo Bình</a>
+                    <a href="../html/min.html">Min</a>
+                    <a href="../html/mrsiro.html">Mr.Siro</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="main_body">
+        <div id="main_1">
+            <img src="../img/backgroundimg2.jpg" alt="backgroundimg2" id="background2">
+            <div class="container" id="amee_container">
+                <img src="../img/singer/amee.jpg" alt="AmeeImage" class="casy_image" onclick="amee_run()">
+                <div class="overlay">Amee</div>
+            </div>
+            <div class="container">
+                <img src="../img/singer/bray.jpg" alt="BRayImage" class="casy_image" onclick="bray_run()">
+                <div class="overlay">B Ray</div>
+            </div>
+            <div class="container">
+                <img src="../img/singer/den.jpg" alt="DenImage" class="casy_image" onclick="den_run()">
+                <div class="overlay">Đen Vâu</div>
+            </div>
+            <div class="container">
+                <img src="../img/singer/ducphuc.jpg" alt="DucPhucImage" class="casy_image" onclick="ducphuc_run()">
+                <div class="overlay">Đức Phúc</div>
+            </div>
+            <div class="container">
+                <img src="../img/singer/erik.jpg" alt="ErikImage" class="casy_image" onclick="erik_run()">
+                <div class="overlay">Erik</div>
+            </div>
+            <div class="container">
+                <img src="../img/singer/jack.jpg" alt="JackImage" class="casy_image" onclick="jack_run()">
+                <div class="overlay">Jack</div>
+            </div>
+            <div class="container">
+                <img src="../img/singer/lebaobinh.jpg" alt="LeBaoBinhImage" class="casy_image" onclick="lebaobinh_run()">
+                <div class="overlay">Lê Bảo Bình</div>
+            </div>
+            <div class="container">
+                <img src="../img/singer/min.jpg" alt="MinImage" class="casy_image" onclick="min_run()">
+                <div class="overlay">Min</div>
+            </div>
+            <div class="container">
+                <img src="../img/singer/mrsiro.jpg" alt="MrSiroImage" class="casy_image" onclick="mrsiro_run()">
+                <div class="overlay">Mr.Siro</div>
+            </div>
+        </div>
+        <div id="main_2">
+            <audio src="../mp3/Mr.Siro/Cô Đơn Không Muốn Về Nhà.mp3" id="song"></audio>
+            <img src="../img/backgroundimg.jpg" id="background">
+            <div id="mp3_container">
+                <div class="box">
+                    <img src="../img/mp3icon/cd.png" id="thumbnail">
+                    <img src="../img/mp3icon/play.png" id="play-pause" onclick="playPause()">
+                    <img src="../img/mp3icon/next.png" id="next-song" onclick="nextSong()">
+                    <img src="../img/mp3icon/previous.png" id="previous-song" onclick="previousSong()">
+                </div>
+                <div class="container_song-title">
+                    <div class="song-title"></div>
+                </div>
+                <input type="range" id="progress-bar" min="0" max="" value="0" onchange="changeProgressbar()" />
+                <div class="currentTime"></div>
+                <div class="durationTime"></div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <br />
+    <footer id="footerdb">
+        <img src="../img/head_foot/cd (1).png" width="40px" height="40px">
+        &emsp;
+        <span id="foot_text">Một sản phẩm của Trần Hoàng Quang Diệu</span>
+    </footer>
+</body>
+
+</html>
